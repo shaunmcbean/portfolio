@@ -1,8 +1,11 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link'
+import getConfig from 'next/config'
 
-export const Skills = ({ title, cards }) => {
+const { publicRuntimeConfig } = getConfig()
+
+export const Skills = ({ title, cards, image }) => {
 	return (
 		<div id="skills" className="bg-secondary py-5 px-5">
 			<div className="container">
@@ -13,7 +16,9 @@ export const Skills = ({ title, cards }) => {
 							key={index}
 							title={value.title}
 							description={value.description}
-							link={value.link} />
+							image = {value.image}
+							years={value.years}
+							link={value.link}/>
 					))}
 				</div>
 			</div>
@@ -21,7 +26,7 @@ export const Skills = ({ title, cards }) => {
 	);
 }
 
-export const Projects = ({ title, cards }) => {
+export const Projects = ({title, cards}) => {
 	return (
 		<div id="projects" className="bg-primary py-5 px-5">
 			<div className="container">
@@ -43,19 +48,26 @@ export const Projects = ({ title, cards }) => {
 	);
 }
 
-export const Card = ({ title, description, icons }) => {
+export const Card = ({ title, description, icons, image, years }) => {
 	return (
-		<div className="card py-3 px-3 mx-sm-4 my-4 card-work" style={{ width: "20rem" }}>
+		<div className="card py-3 px-3 mx-sm-4 my-4 card-work" style={{width: "20rem"}}>
 			<h4 className="text-primary">{title}</h4>
+			<h5 className="">{years}</h5>
 			<p className="text-dark">{description}</p>
 			<div className="text-end">
 				{icons && icons.map((value, index) => (
 					<Link key={index} href={value.link}>
 						<a target="_blank" rel="noreferrer">
-							<FontAwesomeIcon className="icon-style mx-1" icon={value.icon} size="2x" />
+							<FontAwesomeIcon className="icon-style mx-1" icon={value.icon} size="2x"/>
 						</a>
 					</Link>
 				))}
+			</div>
+			<div className="text-center">
+				<img
+					className="h-100 w-75" src={image}
+					alt=""
+				/>
 			</div>
 		</div>
 	);

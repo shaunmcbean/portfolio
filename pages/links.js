@@ -13,9 +13,9 @@ export default function Home() {
       <Header seo={SEO} />
       <div className="d-flex flex-column justify-content-between bg-secondary min-vh-100">
         <div className="py-5 px-5 container text-center">
-          <img className="img-fluid my-3 card-image" width="150" height="150" src={links.image} alt="profile of hashirshoaeb" />
-          <h3 className="mt-3">{links.title}</h3>
-          <p>{links.description}</p>
+          {/*<img className="img-fluid my-3 card-image" width="150" height="150" src={links.image} alt="profile of shivank gupta" />*/}
+          <h1 className="mt-3 text-primary fw-bold">{links.title}</h1>
+          {/*<p>{links.description}</p>*/}
           {links.cards.map((value, index) => (
             <Button key={index} title={value.title} link={value.link} />
           ))}
@@ -30,7 +30,7 @@ export default function Home() {
 function Button({ title, link }) {
   return (
     <div className="row justify-content-center">
-      <div className="card card-work mx-sm-4 my-2" style={{ width: "20rem" }}>
+      <div className="card card-work mx-sm-4 my-3" style={{ width: "20rem" }}>
         <Link href={link}>
           <a target="_blank" rel="noreferrer">
             <h4 className="text-primary py-3 px-3">{title}</h4>
