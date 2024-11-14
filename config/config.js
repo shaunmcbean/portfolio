@@ -41,7 +41,7 @@ export const intro = {
     },
     {
       title: "resume",
-      link: "",
+      link: "https://drive.google.com/file/d/1iSH0UtdWJFN5OFCUcCc5O3VI8Im27lOr/view?usp=sharing",
       isPrimary: false,
     },
   ],
@@ -179,7 +179,7 @@ export const links = {
   cards: [
     {
       title: "website",
-      link: "",
+      link: "https://shaunmcbean.github.io/",
     },
     {
       title: "linkedin",
