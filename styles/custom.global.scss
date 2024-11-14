@@ -150,3 +150,11 @@ a {
   transform: translate(-0.5rem, -0.5rem);
   box-shadow: 2rem 2rem $primary;
 }
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}

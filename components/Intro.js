@@ -11,6 +11,7 @@ export const Intro = ({ title, description, image, buttons }) => {
 				<div className=" row align-items-center">
 					<div className="col-sm-6">
 						<h1 className="text-primary fw-bold display-3">{title}</h1>
+						{/*<h1 className="text-primary ">under construction</h1>*/}
 						<p>{description}</p>
 						<div className="">
 							{buttons.map((value, index) => (
@@ -20,7 +21,8 @@ export const Intro = ({ title, description, image, buttons }) => {
 									</Link>
 									:
 									<Link key={index} href={value.link}>
-										<a target="_blank" rel="noreferrer" className="btn btn-outline-primary my-1 mx-3">{value.title}</a>
+										<a target="_blank" rel="noreferrer"
+										   className="btn btn-outline-primary my-1 mx-3">{value.title}</a>
 									</Link>
 							))}
 						</div>

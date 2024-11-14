@@ -51,8 +51,8 @@ export const about = {
   title: "about me",
   description: [
     "a first-year robotics masters student at the University of Pennsylvania",
-    "an engineer with a passion for new product development, medical robotics, human-robot interaction, and applied learning",
-    "outside of work you can find me cooking, dancing bollywood and bhangra, playing the saxophone, hiking with my dog, and working out",
+    "an engineer with a passion for new product development, control and optimization, human-robot interaction, and learning in robotics",
+    "outside of work you can find me cooking, dancing bollywood and bhangra, playing the saxophone, hiking with my dog, or working out",
   ],
 }
 
@@ -70,7 +70,14 @@ export const work = {
     {
       title: "Worcester Polytechnic Institute",
       years: "2020-2024",
-      description: "Dual B.S in Mechanic Engineering and Robotics Engineering",
+      description: "B.S. in Mechanical Engineering",
+      image: wpi.src,
+      icons: null,
+    },
+    {
+      title: "Worcester Polytechnic Institute",
+      years: "2020-2024",
+      description: "B.S. in Robotics Engineering",
       image: wpi.src,
       icons: null,
     }
